@@ -1,9 +1,4 @@
-/*
- © Tetra Pico
- https://www.facebook.com/tetra.pico/
- tetrapico4@gmail.com
- https://www.youtube.com/channel/UCVnAlFrK2mxVmnM_HTkAKlQ
-*/
+
 
 #include "TinyGPS++.h"
 #include <SoftwareSerial.h>
