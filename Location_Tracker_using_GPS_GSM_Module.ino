@@ -1,5 +1,3 @@
-
-
 #include "TinyGPS++.h"
 #include <SoftwareSerial.h>
 SoftwareSerial GSM(8,9); // tx,rx
@@ -172,7 +170,7 @@ void split_text(byte b) {
 
         // to ensure valid sender uncomment these two lines   
         //valid_sender = false;
-        //if ( strcmp(buffer, "\"01686412243\",") == 0 )
+        //if ( strcmp(buffer, "\"01712296144\",") == 0 )
         valid_sender = true;
 
         
@@ -293,7 +291,7 @@ void send_gps()
   GSM.println("AT+CMGF=1");
   delay(500);
   
-  GSM.println("AT+CMGS=\"01686412243\"");
+  GSM.println("AT+CMGS=\"01793500131\"");
   delay(500);
 
   GSM.print("Lattitude: ");
