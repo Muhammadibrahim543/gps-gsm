@@ -1,3 +1,4 @@
+
 #include "TinyGPS++.h"
 #include <SoftwareSerial.h>
 SoftwareSerial GSM(8,9); // tx,rx
@@ -254,7 +255,7 @@ void read_sms(char msg[10]) {
 void send_gps()
 {
   GSM.end();
-  SoftwareSerial serial_connection(10,11); //tx, rx
+  SoftwareSerial serial_connection(11,12); //tx, rx
   TinyGPSPlus gps;  // GPS object to process the NMEA data
 
   Serial.begin(9600);                //This opens up communications to the Serial monitor in the Arduino IDE
@@ -289,7 +290,7 @@ void send_gps()
   GSM.begin(9600);
 
   GSM.println("AT+CMGF=1");
-  delay(500);
+  delay(500); 
   
   GSM.println("AT+CMGS=\"01793500131\"");
   delay(500);
